@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Demo: Layout using Dojo</title>
+    <link rel="Stylesheet" href="Styles/demo.css" media="screen" type="text/css"/>
+    <link rel="stylesheet" href="style.css"  media="screen" type="text/css" />
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.6/dijit/themes/claro/claro.css" media="screen">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.6.1/dojo/dojo.xd.js" data-dojo-config="parseOnLoad: true"></script>
+    <script>
+        dojo.require("dojo.parser");
+        dojo.require("dijit.layout.BorderContainer");
+        dojo.require("dijit.layout.TabContainer");
+        dojo.require("dijit.layout.ContentPane");
+    </script>
+</head>
+<body class="claro">
+    <div id="appLayout" class="demoLayout" data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="design: 'headline'">
+        <div id = "MyMap"  class="centerPanel" data-dojo-type="dijit.layout.TabContainer" data-dojo-props="region: 'center', tabPosition: 'bottom'">
+            <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="title: 'Group 1'">
+            </div>
+            <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="title: 'Group 2'">
+            </div>
+            <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="title: 'Group 3'">
+            </div>
+        </div>
+        <div class="edgePanel" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region: 'top'">
+            This is the top panel!
+        </div>
+        <div class="edgePanel" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region: 'left', splitter: true">
+            This is the left panel!
+        </div>
+    </div>
+</body>
+</html>
